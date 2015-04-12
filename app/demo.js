@@ -1,7 +1,9 @@
 'use strict';
 
+//defining the module
 var demo = angular.module('demo', ['ui.router']);
 
+//configuring the module
 demo.config(function ($stateProvider, $urlRouterProvider) {
 
   // For any unmatched url, send to /route1
@@ -10,10 +12,11 @@ demo.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/home',
-      templateUrl: 'views/home.html'
+      templateUrl: 'views/home.html',
     });
 });
 
+//common running tasks
 demo.run(function ($state) {
   $state.go('home');
 });
