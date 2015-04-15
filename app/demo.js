@@ -31,7 +31,9 @@ demo.config(function ($stateProvider, $urlRouterProvider) {
     //route for working
     .state('work', {
       url: '/working_of_angluarjs/normal_call',
-      templateUrl: 'views/working_of_angularjs.html'
+      templateUrl: 'views/working_of_angularjs.html',
+      controller: 'WorkController',
+      controllerAs: 'work',
     })
     .state('work.basic', {
       url: '/working_of_angluarjs',

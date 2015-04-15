@@ -37,12 +37,13 @@
             <h3>
                Working of AngluarJS
             </h3>
-            <div ui-view class="z-depth-1 white"></div>
+            <div ui-view class="z-depth-1 brown lighten-5"></div>
             
         </div>
         <div class="row">
-            <div class="col m6 right"><a class="btn" ui-sref="">Next</a></div>
-            <div class="col m6 left"><a class="btn" ui-sref="intro.required">Previous</a></div>
+            <div class="col m4 right"><a class="btn" ui-sref="">Next</a></div>
+            <div class="col m4 right"><a class="btn-floating btn-large waves-effect waves-light red z-depth-1" ng-click="work.play()"><i ng-class="{'mdi-av-play-arrow' : work.play_round !== 6, 'mdi-av-replay' : work.play_round === 6}"></i></a></div>
+            <div class="col m4 left"><a class="btn" ui-sref="intro.required">Previous</a></div>
         </div>
     </div>
     <div class="side col l2">
