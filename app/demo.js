@@ -30,8 +30,16 @@ demo.config(function ($stateProvider, $urlRouterProvider) {
     })
     //route for working
     .state('work', {
-      url: '/working_of_angluarjs',
+      url: '/working_of_angluarjs/normal_call',
       templateUrl: 'views/working_of_angularjs.html'
+    })
+    .state('work.basic', {
+      url: '/working_of_angluarjs',
+      templateUrl: 'views/normal_call.html'
+    })
+    .state('work.advance', {
+      url: '/working_of_angluarjs/angular_call',
+      templateUrl: 'views/angular_call.html'
     })
     //routes for components
     .state('components', {
