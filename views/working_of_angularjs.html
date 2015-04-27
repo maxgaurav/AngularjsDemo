@@ -1,52 +1,20 @@
 <div class="row">
-    <div class="row pop" ng-show="show_css">
-        <div class="card blue-grey darken-1 z-depth-5">
-            <div class="card-content white-text">
-                <span class="card-title">CSS</span>
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <button ng-click="closePop()" class="btn">Close</button>
-            </div>
-        </div>
-    </div>
-    <div class="row pop" ng-show="show_js">
-        <div class="card blue-grey darken-1 z-depth-5">
-            <div class="card-content white-text">
-                <span class="card-title">Java Script</span>
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <button ng-click="closePop()" class="btn">Close</button>
-            </div>
-        </div>
-    </div>
-    <div class="row pop" ng-show="show_html">
-        <div class="card blue-grey darken-1 z-depth-5">
-            <div class="card-content white-text">
-                <span class="card-title">HTML</span>
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <button ng-click="closePop()" class="btn">Close</button>
-            </div>
-        </div>
-    </div>
-    <div class="content col l10">
+    <div class="content col-md-10">
         <div>
             <h3>
                Working of AngluarJS
             </h3>
             <div ui-view class="z-depth-1 brown lighten-5"></div>
-            
         </div>
         <div class="row">
-            <div class="col m4 right"><a class="btn" ui-sref="">Next</a></div>
-            <div class="col m4 right"><a class="btn-floating btn-large waves-effect waves-light red z-depth-1" ng-click="work.play()"><i ng-class="{'mdi-av-play-arrow' : work.play_round !== 6, 'mdi-av-replay' : work.play_round === 6}"></i></a></div>
-            <div class="col m4 left"><a class="btn" ui-sref="intro.required">Previous</a></div>
+            <div class="col-md-4" ng-if="basic==true"><a class="btn btn-info" ui-sref="intro.required">Previous</a></div>
+            <div class="col-md-4" ng-if="basic==false"><a class="btn btn-info" ui-sref="work.basic">Previous</a></div>
+            <div class="col-md-4"><a class="btn btn-info" ng-click="work.play()"><i ng-class="{'glyphicon glyphicon-play-circle' : work.play_round !== 6, 'glyphicon glyphicon-repeat' : work.play_round === 6}"></i></a></div>
+            <div class="col-md-4" ng-if="basic == true"><a class="btn btn-info" ui-sref="work.advance">Next</a></div>
+            <div class="col-md-4" ng-if="basic == false"><a class="btn btn-info" ui-sref="components.home">Next</a></div>
         </div>
     </div>
-    <div class="side col l2">
+    <div class="side col-md-2">
         <div class="row">
             <button class="btn z-depth-2" ng-click="showCss()">CSS</button>
         </div>

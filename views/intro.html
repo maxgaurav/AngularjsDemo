@@ -1,60 +1,27 @@
 <div class="row">
-    <div class="row pop" ng-show="show_css">
-        <div class="card blue-grey darken-1 z-depth-5">
-            <div class="card-content white-text">
-                <span class="card-title">CSS</span>
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <button ng-click="closePop()" class="btn">Close</button>
-            </div>
-        </div>
-    </div>
-    <div class="row pop" ng-show="show_js">
-        <div class="card blue-grey darken-1 z-depth-5">
-            <div class="card-content white-text">
-                <span class="card-title">Java Script</span>
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <button ng-click="closePop()" class="btn">Close</button>
-            </div>
-        </div>
-    </div>
-    <div class="row pop" ng-show="show_html">
-        <div class="card blue-grey darken-1 z-depth-5">
-            <div class="card-content white-text">
-                <span class="card-title">HTML</span>
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-                <button ng-click="closePop()" class="btn">Close</button>
-            </div>
-        </div>
-    </div>
-    <div class="col l10">
+    <div class="col-md-10">
         <div>
             <h3>
                Introduction To AngularJS
             </h3>
-            <div class="row section scrollspy">
-                <ul class="tabs z-depth-1">
-                    <li class="tab col m3"><a class="col m3" ui-sref="intro.basic" ui-sref-active="active">What is AngularJS</a></li>
-                    <li class="tab col m3"><a class="col m3" ui-sref="intro.required" ui-sref-active="active">What you need</a></li>
+            <div class="row">
+                <ul class="nav nav-pills nav-justified">
+                    <li class=""><a ui-sref="intro.basic" ui-sref-active="active">What is AngularJS</a></li>
+                    <li class=""><a ui-sref="intro.required" ui-sref-active="active">What you need</a></li>
                 </ul>
             </div>
-            <div ui-view></div>
+            <div ui-view></div> 
         </div>
     </div>
-    <div class="col l2">
+    <div class="col-md-2">
         <div class="row">
-            <button class="btn z-depth-2" ng-click="showCss()">CSS</button>
+            <button class="btn" ng-click="showCss()">CSS</button>
         </div>
         <div class="row">
-            <button class="btn z-depth-2" ng-click="showJs()">JAVA SCRIPT</button>
+            <button class="btn" ng-click="showJs()">JAVA SCRIPT</button>
         </div>
         <div class="row">
-            <button class="btn z-depth-2" ng-click="showHtml()">HTML</button>
+            <button class="btn" ng-click="showHtml()">HTML</button>
         </div>
     </div>
 </div>

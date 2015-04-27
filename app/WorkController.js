@@ -13,6 +13,14 @@ demo.controller('WorkController', function ($scope) {
 
   work.play_round = 0;
 
+  work.scope.set_pre = function () {
+    work.scope.basic = true;
+  };
+
+  work.scope.set_next = function () {
+    work.scope.basic = false;
+  };
+
   work.play = function () {
 
     if (work.play_round === 0) {
