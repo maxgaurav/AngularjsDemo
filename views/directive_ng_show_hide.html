@@ -1,7 +1,44 @@
 <div class="row">
     <div class="col-md-10">
         <div class="row">
-            Directive ng-show ng-hide
+            <h3>Directives ng-show and ng-hide</h3>
+        </div>
+        <div class="row">
+            <ul>
+                <li>
+                    The ngShow and ngHide directive's shows or hides the given HTML element based on the expression provided to the attribute.
+                </li>
+                <li>
+                    The element is shown or hidden by removing or adding the .ng-hide CSS class onto the element. The .ng-hide CSS class is predefined in AngularJS and sets the display style to none (using an !important flag)
+                </li>
+                <li>
+                    ngShow and ngHide expects their valu to be true or false
+                </li>
+            </ul>
+        </div>
+         <div class="row" ng-init="check1=true;check2=false">
+            <div class="col-md-4">
+                <label for="" class="label-control">Check Box 1</label>
+            </div>
+            <div class="col-md-4">
+                <input type="checkbox" class="form-control" ng-model="check1">
+            </div>
+            <div class="col-md-4">check1 value : {{check1}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="" class="label-control">Check Box 2</label>
+            </div>
+            <div class="col-md-4">
+                <input type="checkbox" class="form-control" ng-model="check2">
+            </div>
+            <div class="col-md-4">check2 value : {{check2}}</div>
+        </div>
+        <div ng-show="check1">
+            I am shown because checkbox 1 is true
+        </div>
+        <div ng-hide="check2">
+            I am shown because checkbox 2 is false
         </div>
         <div class="row">
             <div class="col-md-6 pull-right">

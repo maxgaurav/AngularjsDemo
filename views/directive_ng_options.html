@@ -1,7 +1,25 @@
 <div class="row">
     <div class="col-md-10">
         <div class="row">
-            Directive ng-options
+            <h3>Directive ng-options</h3>
+        </div>
+        <div class="row">
+            <ul>
+                <li>
+                    The ngOptions attribute can be used to dynamically generate a list of <b>&lt;option&gt;</b> elements for the <b>&lt;select&gt;</b> element using the array or object obtained by evaluating the ngOptions comprehension expression.
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-4"><label for="" class="label-control">Select Box</label></div>
+            <div class="col-md-4"><input type="text" class="form-control" ng-model="input_name"></div>
+            <div class="col-md-4">
+                <btton class="btn btn-success" ng-click="addSelect(input_name)">Add</btton>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"><label for="" class="label-control">Select Box</label></div>
+            <div class="col-md-4"><select name="" id="" class="form-control" ng-model="select1" ng-options="value.name for value in option_values"></select></div>
         </div>
         <div class="row">
             <div class="col-md-6 pull-right">

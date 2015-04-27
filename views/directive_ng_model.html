@@ -1,8 +1,158 @@
 <div class="row">
     <div class="col-md-10">
         <div class="row">
-            Directive ng-model
+            <h3>Directive ng-model</h3>
         </div>
+        <accordion close-others="true">
+            <accordion-group heading="Text Box">
+                <div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="">Input Box</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" ng-model="text1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>The model 'test' : <b>{{text1}}</b></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="">Input Box with preloaded data</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" ng-model="text2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>The model value : <b>{{text2}}</b></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="">Input Box with Double binding</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" ng-model="text3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="">Input Box with Double binding</label>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" ng-model="text3">
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group heading="Text Area">
+                <div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="" class="label-control">Text Area</label>
+                        </div>
+                        <div class="col-md-4">
+                            <textarea name="" id="" cols="30" rows="10" ng-model="textarea" class="form-control"></textarea>
+                        </div>
+                        <div class="col-md-4">
+                            <p>{{textarea}}</p>
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group heading="CheckBox">
+                <p>Checkboxes with model provide boolean return</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="" class="label-control">CheckBox</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" class="form-control" ng-model="checkbox1">
+                    </div>
+                    <div class="col-md-4">{{checkbox1}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="" class="label-control">CheckBox2</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" class="form-control" ng-model="checkbox2">
+                    </div>
+                    <div class="col-md-4">{{checkbox2}}</div>
+                </div>
+            </accordion-group>
+            <accordion-group heading="Radio Button">
+                <div>
+                    <div class="row">
+                        <div class="col-md-4"><label for="" class="label-control">Radio1</label></div>
+                        <div class="col-md-8">
+                            <input type="radio" ng-model="radio1" value="1">Value 1
+                            <input type="radio" ng-model="radio1" value="2">Value 2
+                            <input type="radio" ng-model="radio1" value="3">Value 3
+                            <input type="radio" ng-model="radio1" value="4">Value 4
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            Radio Button value : {{radio1}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><label for="" class="label-control">Radio2 with initialized value</label></div>
+                        <div class="col-md-8">
+                            <input type="radio" ng-model="radio2" value="1">Value 1
+                            <input type="radio" ng-model="radio2" value="2">Value 2
+                            <input type="radio" ng-model="radio2" value="3">Value 3
+                            <input type="radio" ng-model="radio2" value="4">Value 4
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            Radio Button value : {{radio2}}
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group heading="Select Box">
+                <div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="" class="label-contro">SelectBox</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select name="" id="" class="form-control" ng-model="select1">
+                                <option value="1">Value 1</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                                <option value="4">Value 4</option>
+                                <option value="5">Value 5</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">Value : {{select1}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="" class="label-contro">SelectBox without blank option</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select name="" id="" class="form-control" ng-model="select2">
+                                <option value="1">Value 1</option>
+                                <option value="2">Value 2</option>
+                                <option value="3">Value 3</option>
+                                <option value="4">Value 4</option>
+                                <option value="5">Value 5</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">Value : {{select2}}</div>
+                    </div>
+                </div>
+            </accordion-group>
+        </accordion>
         <div class="row">
             <div class="col-md-6 pull-right">
                 <a ui-sref="directive.ng_init" class="btn btn-info">Next</a>

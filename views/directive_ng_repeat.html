@@ -1,7 +1,54 @@
 <div class="row">
     <div class="col-md-10">
         <div class="row">
-            Directive ng-repeat
+            <h3>Directive ng-repeat</h3>
+        </div>
+        <div class="row">
+            <ul>
+                <li>
+                    The ngRepeat directive instantiates a template once per item from a collection.
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <b>An ng repeat expample</b>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Enter name</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" ng-model="input_name">
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-success" ng-click="addName(input_name)">Add</button>
+                </div>
+            </div>
+            <div ng-repeat="name in names" class="row">
+               {{$index}}) Name  : {{name}}
+            </div>
+        </div>
+        <div class="row">
+            <b>An ng repeat expample with objects</b>
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="">Enter name</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" ng-model="input_name1">
+                </div>
+                <div class="col-md-3" ng-init="gender='Male'">
+                    <select class="form-control" ng-model="gender" >
+                        <option value="Male">Male</option>
+                        <option value="Fe-Male">Fe-Male</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-success" ng-click="addNameObject(input_name1, gender)">Add</button>
+                </div>
+            </div>
+            <div ng-repeat="child in childs" class="row">
+               {{$index}}) Name  : {{child.name}} Gender : {{child.gender}}
+            </div>
         </div>
         <div class="row">
             <div class="col-md-6 pull-right">
