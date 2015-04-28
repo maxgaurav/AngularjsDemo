@@ -2,10 +2,10 @@
     <div class="page-header">
         <h1>Forms</h1>
     </div>
-    <div class="set_space row">
+    <div class="row">
         <ul class="nav nav-pills">
-            <li ui-sref-active="active" class="col-md-4"><a ui-sref="forms-basic">Basic</a></li>
-            <li ui-sref-active="active" class="col-md-4"><a ui-sref="forms">Example</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms-basic">Basic</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms">Example</a></li>
         </ul>
     </div>
     <div class="row">
@@ -49,7 +49,7 @@
                         <div class="col-md-2">
                             <label for="" class="label-control">What Cars you would like to own</label>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <input type="checkbox" ng-model="car1">Audi R8-Spyder.
                             <input type="checkbox" ng-model="car2">BMW X1
                             <input type="checkbox" ng-model="car3">Ferrari F430 Spider
@@ -62,25 +62,25 @@
                     </div>
                 </form>
             </div>
-            <div class="set_space row">
+            <div class="row">
                 <div class="col-md-6 pull-right">
-                    <a ui-sref="merits" class="btn btn-info set-size">Next</a>
+                    <a ui-sref="merits" class="btn btn-info">Next</a>
                 </div>
                 <div class="col-md-6 pull-left">
-                    <a ui-sref="forms-basic" class="btn btn-warning set-size">Previous</a>
+                    <a ui-sref="forms" class="btn btn-info">Previous</a>
                 </div>
             </div>
         </div>
         <div class="col-md-2">
             <div class="row">
                 <div class="col-md-12">
-                    <button class="btn btn-primary btn-modal head" ng-click="showCss()">CSS</button>
+                    <button class="btn" ng-click="showCss()">CSS</button>
                 </div>
                 <div class="col-md-12">
-                    <button class="btn btn-primary btn-modal head" ng-click="showHtml()">HTML</button>
+                    <button class="btn" ng-click="showHtml()">HTML</button>
                 </div>
                 <div class="col-md-12">
-                    <button class="btn btn-primary btn-modal head" ng-click="showJs()">JAVASCRIPT</button>
+                    <button class="btn" ng-click="showJs()">JAVASCRIPT</button>
                 </div>
             </div>
         </div>

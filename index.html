@@ -15,9 +15,6 @@
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!--materialize-->
-    <!--link rel="stylesheet" type="text/css" href="vendor/materialize/css/materialize.css">
-    <script type="text/javascript" src="vendor/materialize/js/materialize.min.js"></script-->
 </head>
 
 <body ng-app="demo">
@@ -28,13 +25,15 @@
             </div>
             <div>
                 <ul class="nav navbar-nav">
-                    <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
-                    <li ui-sref-active="active"><a ui-sref="intro.basic">Intro</a></li>
-                    <li ui-sref-active="active"><a ui-sref="work.basic">Working</a></li>
-                    <li ui-sref-active="active"><a ui-sref="components.home">Components</a></li>
-                    <li ui-sref-active="active"><a ui-sref="binding">Bindings</a></li>
-                    <li ui-sref-active="active"><a ui-sref="directive.ng_model">Directives</a></li>
-                    <li ui-sref-active="active"><a ui-sref="forms   ">Form</a></li>
+                    <li ng-class="{'active' : active_home}"><a ui-sref="home">Home</a></li>
+                    <li ng-class="{'active' : active_intro}"><a ui-sref="intro.basic">Intro</a></li>
+                    <li ng-class="{'active' : active_work}"><a ui-sref="work.basic">Working</a></li>
+                    <li ng-class="{'active' : active_component}"><a ui-sref="components.home">Components</a></li>
+                    <li ng-class="{'active' : active_binding}"><a ui-sref="binding">Bindings</a></li>
+                    <li ng-class="{'active' : active_directive}"><a ui-sref="directive.ng_model">Directives</a></li>
+                    <li ng-class="{'active' : active_form}"><a ui-sref="forms">Form</a></li>
+                    <li ng-class="{'active' : active_merit}"><a ui-sref="merits">Merits</a></li>
+                    <li ng-class="{'active' : active_question}"><a ui-sref="questions">Questions</a></li>
                 </ul>
             </div>
         </nav>
@@ -47,6 +46,8 @@
     <script src="app/BindingController.js"></script>
     <script src="app/DirectiveController.js"></script>
     <script src="app/FormController.js"></script>
+    <script src="app/ModalController.js"></script>
+    <script src="app/IntroController.js"></script>
 </body>
 
 </html>

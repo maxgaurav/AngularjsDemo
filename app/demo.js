@@ -17,6 +17,7 @@ demo.config(function ($stateProvider, $urlRouterProvider) {
     //routes for intro
     .state('intro', {
       url: '/intro',
+      controller : 'IntroController',
       templateUrl: 'views/intro.html'
     })
     //child routes
@@ -107,6 +108,12 @@ demo.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: 'views/directive_ng_options.html'
     })
     //routes for forms
+    .state('forms-basic', {
+      url: '/forms-basic',
+      controller: 'FormController',
+      controllerAs: 'formcont',
+      templateUrl: 'views/forms-basic.html'
+    })
     .state('forms', {
       url: '/forms',
       controller: 'FormController',

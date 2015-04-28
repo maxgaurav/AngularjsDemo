@@ -1,12 +1,12 @@
 'use strict';
 
-demo.controller('ComponentController', function ($scope, $modal, notify) {
+demo.controller('ComponentController', function ($scope, $modal, notify, $rootScope) {
 
-  var home = this;
-  home.scope = $scope;
+  var component = this;
+  component.scope = $scope;
 
   //funtion to open css pop up
-  home.scope.showCss = function () {
+  component.scope.showCss = function () {
     var modal = {};
     modal.showCss = true;
     modal.showJs = false;
@@ -25,7 +25,7 @@ demo.controller('ComponentController', function ($scope, $modal, notify) {
   };
 
   //funtion to open css pop up
-  home.scope.showJs = function () {
+  component.scope.showJs = function () {
     var modal = {};
     modal.showCss = true;
     modal.showJs = false;
@@ -44,7 +44,7 @@ demo.controller('ComponentController', function ($scope, $modal, notify) {
   };
 
   //funtion to open css pop up
-  home.scope.showHtml = function () {
+  component.scope.showHtml = function () {
     var modal = {};
     modal.showCss = true;
     modal.showJs = false;
@@ -62,16 +62,28 @@ demo.controller('ComponentController', function ($scope, $modal, notify) {
     });
   };
 
-  home.scope.no = function () {
+  component.scope.no = function () {
     $modalInstance.dismiss('cancel');
   };
 
-  home.scope.callNotify = function (msg) {
+  component.scope.callNotify = function (msg) {
     notify(msg);
   };
+
+  component.scope.init = function () {
+    $rootScope.active_home = false;
+    $rootScope.active_intro = false;
+    $rootScope.active_work = false;
+    $rootScope.active_component = true;
+    $rootScope.active_binding = false;
+    $rootScope.active_directive = false;
+    $rootScope.active_form = false;
+    $rootScope.active_merit = false;
+  };
+  component.scope.init();
 });
 
-demo.factory('notify',  function ($window) {
+demo.factory('notify', function ($window) {
   var msgs = [];
   return function (msg) {
     msgs.push(msg);

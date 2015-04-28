@@ -1,3 +1,7 @@
+body{
+    font-size: 20px !important;
+}
+
 .column {
     height: 350px;
     width: 35px;
@@ -25,4 +29,43 @@
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+.set_space{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-modal{
+    width: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+.head{
+    position: relative;
+    top:-108px;
+}
+
+.btn-start{
+    width: 100px;
+    position: relative;
+    top:200px;
+}
+
+.btn-play{
+    width: 100px;
+}
+
+.glyphicon{
+    font-size: 20px;
+}
+
+.set_play_space{
+    margin-top: 100px;
+}
+
+.set-size{
+    width: 100px;
 }

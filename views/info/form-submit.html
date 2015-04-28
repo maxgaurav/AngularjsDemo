@@ -1,0 +1,39 @@
+<div class="col-md-offset-1">
+	<div>
+		<div class="page-header"><h2>Submitted Values</h2></div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><label for="">Your Name :</label></div>
+		<div class="col-md-4"><label for="">{{modal.name}}</label></div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><label for="">Your Email :</label></div>
+		<div class="col-md-4"><label for="">{{modal.email}}</label></div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><label for="">Prefferd Food :</label></div>
+		<div class="col-md-4"><label for="">{{(modal.prefferd_food == undefined) ? 'None' : <modal class="prefferd_food"></modal>}}</label></div>
+	</div>
+
+	<div class="row">
+		<table class="table-condensed">
+			<tr>
+				<th>
+					#
+				</th>
+				<th>
+					Car Name
+				</th>
+				<th>
+					Like to own
+				</th>
+			</tr>
+			<tr ng-repeat="car in modal.cars">
+				<td>{{$index + 1}}</td>
+				<td>{{car.name}}</td>
+				<td>{{(car.value == true) ? 'Yes' : 'No'}}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="text-center"><button class="btn btn-danger" ng-click="no()">Close</button></div>
+</div>

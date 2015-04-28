@@ -6,23 +6,20 @@
             </h3>
             <div ui-view class="z-depth-1 brown lighten-5"></div>
         </div>
-        <div class="row">
-            <div class="col-md-4" ng-if="basic==true"><a class="btn btn-info" ui-sref="intro.required">Previous</a></div>
-            <div class="col-md-4" ng-if="basic==false"><a class="btn btn-info" ui-sref="work.basic">Previous</a></div>
-            <div class="col-md-4"><a class="btn btn-info" ng-click="work.play()"><i ng-class="{'glyphicon glyphicon-play-circle' : work.play_round !== 6, 'glyphicon glyphicon-repeat' : work.play_round === 6}"></i></a></div>
-            <div class="col-md-4" ng-if="basic == true"><a class="btn btn-info" ui-sref="work.advance">Next</a></div>
-            <div class="col-md-4" ng-if="basic == false"><a class="btn btn-info" ui-sref="components.home">Next</a></div>
+        <div class="set_space row">
+            <div class="col-md-4" ng-if="basic==true"><a class="btn btn-warning set-size" ui-sref="intro.required">Previous</a></div>
+            <div class="col-md-4" ng-if="basic==false"><a class="btn btn-warning set-size" ui-sref="work.basic">Previous</a></div>
+            <div class="col-md-4"><a class="btn btn-primary btn-play" ng-click="work.play()"><i ng-class="{'glyphicon glyphicon-play-circle' : work.play_round !== 6, 'glyphicon glyphicon-repeat' : work.play_round === 6}"></i></a></div>
+            <div class="col-md-4" ng-if="basic == true"><a class="btn btn-info set-size" ui-sref="work.advance">Next</a></div>
+            <div class="col-md-4" ng-if="basic == false"><a class="btn btn-info set-size" ui-sref="components.home">Next</a></div>
         </div>
     </div>
     <div class="side col-md-2">
         <div class="row">
-            <button class="btn z-depth-2" ng-click="showCss()">CSS</button>
+            <button class="btn btn-primary btn-modal" ng-click="showHtml()">HTML</button>
         </div>
         <div class="row">
-            <button class="btn z-depth-2" ng-click="showJs()">JAVA SCRIPT</button>
-        </div>
-        <div class="row">
-            <button class="btn z-depth-2" ng-click="showHtml()">HTML</button>
+            <button class="btn btn-primary btn-modal" ng-click="showJs()">JAVA SCRIPT</button>
         </div>
     </div>
 </div>

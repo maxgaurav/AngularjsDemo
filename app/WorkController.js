@@ -1,6 +1,6 @@
 'use strict';
 
-demo.controller('WorkController', function ($scope) {
+demo.controller('WorkController', function ($scope, $rootScope) {
   var work = this;
   work.scope = $scope;
 
@@ -57,5 +57,17 @@ demo.controller('WorkController', function ($scope) {
       work.second_response = false;
     }
   };
+
+    work.scope.init = function () {
+    $rootScope.active_home = false;
+    $rootScope.active_intro = false;
+    $rootScope.active_work = true;
+    $rootScope.active_component = false;
+    $rootScope.active_binding = false;
+    $rootScope.active_directive = false;
+    $rootScope.active_form = false;
+    $rootScope.active_merit = false;
+  };
+  work.scope.init();
 
 });

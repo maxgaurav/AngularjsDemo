@@ -1,12 +1,10 @@
 'use strict';
 
-demo.controller('BindingController', function ($scope, $modal, $rootScope) {
-
-  var binding = this;
-  binding.scope = $scope;
-
+demo.controller('IntroController', function ($scope, $modal, $rootScope, $state) {
+  var intro = this;
+  intro.scope = $scope;
   //funtion to open css pop up
-  binding.scope.showCss = function () {
+  intro.scope.showCss = function () {
     var modal = {};
     modal.showCss = true;
     modal.showJs = false;
@@ -25,7 +23,7 @@ demo.controller('BindingController', function ($scope, $modal, $rootScope) {
   };
 
   //funtion to open css pop up
-  binding.scope.showJs = function () {
+  intro.scope.showJs = function () {
     var modal = {};
     modal.showCss = true;
     modal.showJs = false;
@@ -44,7 +42,7 @@ demo.controller('BindingController', function ($scope, $modal, $rootScope) {
   };
 
   //funtion to open css pop up
-  binding.scope.showHtml = function () {
+  intro.scope.showHtml = function () {
     var modal = {};
     modal.showCss = true;
     modal.showJs = false;
@@ -62,18 +60,15 @@ demo.controller('BindingController', function ($scope, $modal, $rootScope) {
     });
   };
 
-  binding.scope.no = function () {
-    $modalInstance.dismiss('cancel');
-  };
-
-  binding.scope.init = function () {
+  intro.scope.init = function () {
     $rootScope.active_home = false;
-    $rootScope.active_intro = false;
+    $rootScope.active_intro = true;
     $rootScope.active_work = false;
     $rootScope.active_component = false;
-    $rootScope.active_binding = true;
+    $rootScope.active_binding = false;
     $rootScope.active_directive = false;
     $rootScope.active_form = false;
+    $rootScope.active_merit = false;
   };
-  binding.scope.init();
+  intro.scope.init();
 });

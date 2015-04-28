@@ -1,6 +1,6 @@
 'use strict';
 
-demo.controller('DirectiveController', function ($scope, $modal) {
+demo.controller('DirectiveController', function ($scope, $modal, $rootScope) {
 
   var directive = this;
   directive.scope = $scope;
@@ -101,4 +101,15 @@ demo.controller('DirectiveController', function ($scope, $modal) {
   directive.scope.no = function () {
     $modalInstance.dismiss('cancel');
   };
+    directive.scope.init = function () {
+    $rootScope.active_home = false;
+    $rootScope.active_intro = false;
+    $rootScope.active_work = false;
+    $rootScope.active_component = false;
+    $rootScope.active_binding = false;
+    $rootScope.active_directive = true;
+    $rootScope.active_form = false;
+    $rootScope.active_merit = false;
+  };
+  directive.scope.init();
 });
