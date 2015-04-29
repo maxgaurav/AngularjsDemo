@@ -1,0 +1,52 @@
+<div class="col-md-offset-1">
+    <div>
+        <div class="page-header">
+            <h3>Directive JS</h3>
+        </div>
+    </div>
+    <div>
+        <div class="set_space row">
+            <div class="row">
+                Defining a directive
+            </div>
+            <ul>
+                <li>
+                    <code>
+                    angular.module('modulename').direcitive('directiveName', function('dependencies(un-ordered)'){
+                        return {
+                            restrict : 'AEC',
+                            template: 'my-customer.html'
+                        }
+                    })
+                    </code>
+                </li>
+                <li>
+                    <code>
+                    modulename.direcitive('directiveName', function('dependencies(un-ordered)'){ 
+                        return {<br>
+                            restrict : 'AEC',
+                            template: 'my-custom.html'<br>
+                        }
+                    })
+                   </code>
+                </li>
+            </ul>
+            <div class="row">
+                Our application has
+            </div>
+            <code>
+                demo.directive('test', function () {<br>
+  return {
+    restrict: 'A',
+    templateUrl: 'views/test.html'<br>
+  };
+});
+            </code>
+        </div>
+    </div>
+    <div class="set_space row">
+        <div class="col-md-offset-4">
+            <btton class="btn btn-danger" ng-click="no()">Close</btton>
+        </div>
+    </div>
+</div>

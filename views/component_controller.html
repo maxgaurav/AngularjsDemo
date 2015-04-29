@@ -12,15 +12,10 @@
                     You can attach a controller via ng-controller directive.
                 </li>
                 <li>
-                    Inside ComponentController.js
-                    <pre lang="javascript">
-                        demo.controller('ComponentController', function ($scope, $modal) { 
-                            --
-                         }
-                    </pre>
+                     The Controller is the place where you define the logic/buisness end of the application
                 </li>
                 <li>
-                     The Controller is the place where you define the logic/buisness end of the application
+                    A controller can inherit the scope of the application and work around it
                 </li>
             </ul>
         </div>
@@ -36,13 +31,10 @@
     <div class="col-md-2">
         <div class="row">
             <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showCss()">CSS</button>
+                <button class="btn btn-primary btn-modal head" ng-click="showHtml('controllerinfo')">HTML</button>
             </div>
             <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showHtml()">HTML</button>
-            </div>
-            <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showJs()">JAVASCRIPT</button>
+                <button class="btn btn-primary btn-modal head" ng-click="showJs('controllerjs')">JAVASCRIPT</button>
             </div>
         </div>
     </div>

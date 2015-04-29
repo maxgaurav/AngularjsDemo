@@ -107,6 +107,10 @@ demo.config(function ($stateProvider, $urlRouterProvider) {
       url: '/ng-options',
       templateUrl: 'views/directive_ng_options.html'
     })
+    .state('directive.others', {
+      url: '/other-directives',
+      templateUrl: 'views/directives_other.html'
+    })
     //routes for forms
     .state('forms-basic', {
       url: '/forms-basic',
@@ -120,12 +124,17 @@ demo.config(function ($stateProvider, $urlRouterProvider) {
       controllerAs: 'formcont',
       templateUrl: 'views/forms.html'
     })
-    //routes for forms
+    //routes for merits
     .state('merits', {
       url: '/merits',
       controller: 'MeritController',
       controllerAs: 'merit',
-      templateUrl: 'views/merit.html'
+      templateUrl: 'views/merits.html'
+    })
+    //routes for questions
+    .state('questions', {
+      url: '/questions',
+      templateUrl: 'views/questions.html'
     });
 
 });

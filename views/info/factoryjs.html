@@ -1,0 +1,52 @@
+<div class="col-md-offset-1">
+    <div>
+        <div class="page-header">
+            <h3>Factory JS</h3>
+        </div>
+    </div>
+    <div>
+        <div class="set_space row">
+            <div class="row">
+                Defining a Factory/Service
+            </div>
+            <ul>
+                <li>
+                    <code>
+                    angular.module('modulename').factory('FactoryName', function('dependencies(un-ordered)'){
+                        code
+                        return factoryinstance/some object/funtion
+                    })
+                    </code>
+                </li>
+                <li>
+                    <code>
+                    modulename.factory('FactoryName', function('dependencies(un-ordered)'){ 
+                        code;
+                        return factoryinstance/some object/funtion;
+                    })
+                   </code>
+                </li>
+            </ul>
+            <div class="row">
+                Our application we have a ComponentController.js
+            </div>
+            <code>
+                demo.factory('notify', function ($window) {<br>
+  var msgs = [];<br>
+  return function (msg) {<br>
+    msgs.push(msg);<br>
+    if (msgs.length === 3) {<br>
+      $window.alert(msgs.join("\n"));<br>
+      msgs = [];<br>
+    }<br>
+  };<br>
+});<br>
+            </code>
+        </div>
+    </div>
+    <div class="set_space row">
+        <div class="col-md-offset-4">
+            <btton class="btn btn-danger" ng-click="no()">Close</btton>
+        </div>
+    </div>
+</div>

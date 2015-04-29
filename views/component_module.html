@@ -9,16 +9,10 @@
 					You can think of a module as container's for the different parts of  application.
 				</li>
 				<li>
-					It is the first thing that you define. Like in our application
-					<pre>
-						var demo = angular.module('demo', ['ui.router', 'ui.bootstrap']);
-					</pre>
+					It is the first thing that you define.
 				</li>
 				<li>
 					After defining the module you declare where to use it in your application using ng-app directive
-					<pre>
-						&lt;div ng-app="demo">&lt;/div>
-					</pre>
 				</li>
 				<li>
 					Dependencies in Angular modules can be injected in any order and in any number
@@ -37,13 +31,10 @@
     <div class="col-md-2">
         <div class="row">
             <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showCss()">CSS</button>
+                <button class="btn btn-primary btn-modal head" ng-click="showHtml('moduleinfo')">HTML</button>
             </div>
             <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showHtml()">HTML</button>
-            </div>
-            <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showJs()">JAVASCRIPT</button>
+                <button class="btn btn-primary btn-modal head" ng-click="showJs('modulejs')">JAVASCRIPT</button>
             </div>
         </div>
     </div>

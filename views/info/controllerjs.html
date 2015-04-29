@@ -1,0 +1,43 @@
+<div class="col-md-offset-1">
+    <div>
+        <div class="page-header">
+            <h3>Controller JS</h3>
+        </div>
+    </div>
+    <div>
+        <div class="set_space row">
+            <div class="row">
+                Defining a controller
+            </div>
+            <ul>
+                <li>
+                    <code>
+					angular.module('modulename').controller('ControllerName', function('dependencies(un-ordered)'){
+						code
+					})
+					</code>
+                </li>
+                <li>
+                	<code>
+                    modulename.controller('ControllerName', function('dependencies(un-ordered)'){ 
+                    	code 
+                    })
+                   </code>
+                </li>
+            </ul>
+            <div class="row">
+                Our application we have a ComponentController.js
+            </div>
+            <code>
+				demo.controller('ComponentController',function($scope, $modal, $rootScope){
+					code
+				})
+			</code>
+        </div>
+    </div>
+    <div class="set_space row">
+        <div class="col-md-offset-4">
+            <btton class="btn btn-danger" ng-click="no()">Close</btton>
+        </div>
+    </div>
+</div>
