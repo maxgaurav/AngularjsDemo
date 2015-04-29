@@ -1,6 +1,9 @@
 body{
     font-size: 20px !important;
 }
+.error{
+    color: red;
+}
 
 .column {
     height: 350px;
@@ -68,4 +71,11 @@ body{
 
 .set-size{
     width: 100px;
+}
+
+.set-height{
+    height: 450px;
+    overflow-y: auto;
+    overflow-x : hidden; 
+    padding-left: 30px;
 }

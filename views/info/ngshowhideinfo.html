@@ -1,0 +1,41 @@
+<div class="col-md-offset-1">
+    <div>
+        <div class="page-header">
+            <h3>ngShow ngHide HTML</h3>
+        </div>
+    </div>
+    <div class="set-height">
+        <div class="set_space row">
+            <div class="row">
+                ngIf Directive
+            </div>
+            <code>
+                    &lt;Any ng-show="true">
+                    &lt;Any ng-hide="true">
+                </code>
+            <div class="set_space"></div>
+            <div class="row">
+                Dom visibility using checkboxes and ng-show, ng-hide
+            </div>
+            <code>
+                &lt;input type="checkbox" class="form-control" ng-model="check1">
+                &lt;input type="checkbox" class="form-control" ng-model="check2">
+            </code>
+            <div class="row">
+                DOM div elements with ng-if attributes
+            </div>
+            <code>
+                &lt;div ng-show="check1==true">
+                    I am shown because checkbox 1 is true
+                &lt;/div>
+                &lt;div ng-hide="check2==false">
+                    I am shown because checkbox 2 is false&lt;/div>
+            </code>
+        </div>
+    </div>
+    <div class="set_space row">
+        <div class="col-md-offset-4">
+            <btton class="btn btn-danger" ng-click="no()">Close</btton>
+        </div>
+    </div>
+</div>

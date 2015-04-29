@@ -1,19 +1,31 @@
 <div class="col-md-offset-1">
     <div>
         <div class="page-header">
-            <h3>Directive HTML</h3>
+            <h3>Controller HTML</h3>
         </div>
     </div>
     <div>
         <div class="set_space row">
             <div class="row">
-                Test.html
+                Setting a controller in application
+                <ul>
+                    <li>
+                        <code>
+							&lt;ANY ng-controller="ControllerName">
+						</code>
+                    </li>
+                    <li>
+                        <code>
+							&lt;ANY ng-controller="ControllerName as cont">
+						</code>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                Our application ng-app
+            </div>
             <code>
-				&lt;div class="row"><br>
-	&lt;p><br>
-		This element has been called using a directive<br>
-	&lt;/p><nr>
-&lt;/div><br>
+				&lt;div ng-controller="ComponentController as component">
 			</code>
         </div>
     </div>

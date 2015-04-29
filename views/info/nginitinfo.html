@@ -1,0 +1,48 @@
+<div class="col-md-offset-1">
+    <div>
+        <div class="page-header">
+            <h3>ngInit HTML</h3>
+        </div>
+    </div>
+    <div class="set-height">
+        <div class="set_space row">
+            <div class="row">
+                ngInit Directive
+            </div>
+            <code>
+					&lt;Any ng-init="action">
+				</code>
+            <div class="row">
+                Initializing the an value
+            </div>
+            <code>
+				&lt;span ng-init="test = 'Testing'"><br>
+                test = <span>{</span>{test}}
+			</code>
+            <div class="row">
+                Initializing the text box ng-model
+            </div>
+            <code>
+                &lt;li ng-init="text1 = 'This is initialized by ng-init'"><br>
+            </code>
+            <div class="row">
+                Calling a function 
+            </div>
+            <code>
+                &lt;li ng-init="ngInitFunc()"><br>
+            </code>
+            <div class="row">
+                <b>The function is defined in controller</b>
+            </div>
+                <code>
+                    directivecont.scope.ngInitFunc = function () {<br>
+                        directivecont.scope.initfunct = "I have been initialized by ng-init";<br>};
+                </code>
+        </div>
+    </div>
+    <div class="set_space row">
+        <div class="col-md-offset-4">
+            <btton class="btn btn-danger" ng-click="no()">Close</btton>
+        </div>
+    </div>
+</div>

@@ -6,32 +6,35 @@ demo.controller('FormController', function ($scope, $modal, $rootScope) {
   formcont.scope = $scope;
 
   formcont.scope.submitForm = function () {
-    var modal = {};
-    modal.name = formcont.scope.name;
-    modal.email = formcont.scope.email;
-    modal.prefferd_food = formcont.scope.prefferd_food;
-    modal.cars = [{
-      name: 'Audi R8-Spyder',
-      value: formcont.scope.car1
-    }, {
-      name: 'BMW X1',
-      value: formcont.scope.car2
-    }, {
-      name: 'Ferrari F430 Spider',
-      value: formcont.scope.car3
-    }];
+    if (formcont.scope.form.$invalid) {
+      alert('Invalid form');
+    } else {
+      var modal = {};
+      modal.name = formcont.scope.name;
+      modal.email = formcont.scope.email;
+      modal.preffered_food = formcont.scope.prefferd_food;
+      modal.cars = [{
+        name: 'Audi R8-Spyder',
+        value: formcont.scope.car1
+      }, {
+        name: 'BMW X1',
+        value: formcont.scope.car2
+      }, {
+        name: 'Ferrari F430 Spider',
+        value: formcont.scope.car3
+      }];
 
-    var modalInstance = $modal.open({
-      templateUrl: 'views/info/form-submit.html',
-      controller: 'ModalController',
-      size: 'lg',
-      resolve: {
-        modal: function () {
-          return modal;
+      var modalInstance = $modal.open({
+        templateUrl: 'views/info/form-submit.html',
+        controller: 'ModalController',
+        size: 'lg',
+        resolve: {
+          modal: function () {
+            return modal;
+          }
         }
-      }
-    });
-
+      });
+    }
   };
 
   //funtion to open css pop up

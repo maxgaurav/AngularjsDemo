@@ -1,0 +1,40 @@
+<div class="col-md-offset-1">
+    <div>
+        <div class="page-header">
+            <h3>ngRepeat HTML</h3>
+        </div>
+    </div>
+    <div class="set-height">
+        <div class="set_space row">
+            <div class="row">
+                ngRepeat arrtribute
+            </div>
+            <code>
+                    &lt;Any ng-repeat="item in items">&lt;Any>
+                </code>
+            <div class="set_space"></div>
+            <div class="row">
+                Dom visibility using checkboxes and ng-show, ng-hide
+            </div>
+            <code>
+               &lt;div ng-repeat="name in names"><br>
+                <span>{</span>{$index}}) Name  : <span>{</span>{name}}<br>
+                &lt;/div>
+            </code>
+            <div class="set_space"></div>
+            <div class="row">
+                ngRepeat with objects
+            </div>
+            <code>
+            &lt;div ng-repeat="child in childs" class="row"><br>
+               <span>{</span>{$index}}) Name  : <span>{</span>{child.name}} Gender : <span>{</span>{child.gender}}<br>
+            &lt;/div>
+            </code>
+        </div>
+    </div>
+    <div class="set_space row">
+        <div class="col-md-offset-4">
+            <btton class="btn btn-danger" ng-click="no()">Close</btton>
+        </div>
+    </div>
+</div>

@@ -14,11 +14,14 @@
                             <span ng-init="test='Testing'"> test = {{test}}</span>
                         </div>
                     </li>
-                    <li>
-                        Call a function
-                        
+                    <li ng-init="text1 = 'This is initialized by ng-init'">Initializing a model of a text box<br>
+                        <input type="text" class="form-control" ng-model="text1">
                     </li>
-                    <li>Initialize multiple models</li>
+                    <li>
+                        Call a function<br>
+                        <span ng-init="ngInitFunc()"><b>{{initfunct}}</b></span> 
+                    </li>
+                    <li>This directive has higher priority than other directives</li>
                 </ul>
             </p>
         </div>
@@ -34,13 +37,7 @@
     <div class="col-md-2">
         <div class="row">
             <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showCss()">CSS</button>
-            </div>
-            <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showHtml()">HTML</button>
-            </div>
-            <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showJs()">JAVASCRIPT</button>
+                <button class="btn btn-primary btn-modal head" ng-click="showHtml('nginitinfo')">HTML</button>
             </div>
         </div>
     </div>

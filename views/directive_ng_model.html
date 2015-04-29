@@ -3,6 +3,12 @@
         <div class="row">
             <h3>Directive ng-model</h3>
         </div>
+        <div class="row">
+            <ul>
+                <li>The ng-model is an attribute directive.</li>
+                <li>It is a two way binding</li>
+            </ul>
+        </div>
         <accordion close-others="true">
             <accordion-group heading="Text Box">
                 <div>
@@ -89,7 +95,9 @@
             <accordion-group heading="Radio Button">
                 <div>
                     <div class="row">
-                        <div class="col-md-4"><label for="" class="label-control">Radio1</label></div>
+                        <div class="col-md-4">
+                            <label for="" class="label-control">Radio1</label>
+                        </div>
                         <div class="col-md-8">
                             <input type="radio" ng-model="radio1" value="1">Value 1
                             <input type="radio" ng-model="radio1" value="2">Value 2
@@ -103,7 +111,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4"><label for="" class="label-control">Radio2 with initialized value</label></div>
+                        <div class="col-md-4">
+                            <label for="" class="label-control">Radio2 with initialized value</label>
+                        </div>
                         <div class="col-md-8">
                             <input type="radio" ng-model="radio2" value="1">Value 1
                             <input type="radio" ng-model="radio2" value="2">Value 2
@@ -114,6 +124,20 @@
                     <div class="row">
                         <div class="col-md-12">
                             Radio Button value : {{radio2}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="" class="label-control" ng-init="radio3 = ''">Radio3 with object values</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="radio" ng-model="radio3" ng-value="{name : 'Jhon' , age : 24}">Jhon
+                            <input type="radio" ng-model="radio3" ng-value="{name : 'Jane', age : 20}">Jane
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            Radio Button value : {{radio3}}
                         </div>
                     </div>
                 </div>
@@ -165,13 +189,7 @@
     <div class="col-md-2">
         <div class="row">
             <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showCss()">CSS</button>
-            </div>
-            <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showHtml()">HTML</button>
-            </div>
-            <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showJs()">JAVASCRIPT</button>
+                <button class="btn btn-primary btn-modal head" ng-click="showHtml('ngmodelinfo')">HTML</button>
             </div>
         </div>
     </div>

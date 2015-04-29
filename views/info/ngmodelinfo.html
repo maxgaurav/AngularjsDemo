@@ -1,0 +1,103 @@
+<div class="col-md-offset-1">
+    <div>
+        <div class="page-header">
+            <h3>ngModel HTML</h3>
+        </div>
+    </div>
+    <div class="set-height">
+        <div class="set_space row">
+            <div class="row">
+                Input boxes
+            </div>
+            <code>
+					&lt;input type="text" ng-model="text1"><br>
+					The model '<span>{</span>{text1}}'
+				</code>
+            <div class="row">
+                Initializing text2 model form controller
+            </div>
+            <code>
+				&lt;input type="text" ng-model="text2"><br>
+			</code>
+            <b>Inside the DirectivesController</b>
+            <br>
+            <code>
+				var directivecont = this;<br>
+				directivecont.scope = $scope;
+				directivecont.scope.text2 = 'This is pre loaded data';
+			</code>
+            <div class="set_space">
+                <div class="row">
+                    Texarea
+                </div>
+                <code>
+					&lt;textarea ng-model="textarea">&lt;/textarea><br>
+					The model '<span>{</span>{textarea}}'
+				</code>
+            </div>
+            <div class="set_space"></div>
+            <div class="row">
+                Checkboxes
+            </div>
+            <code>
+				&lt;input type="checkbox" ng-model="check1"><br>
+				The model '<span>{</span>{check1}}'
+			</code>
+            <div class="row">
+                Initializing the checkbox
+            </div>
+            <code>
+					&lt;input type="checkbox" ng-model="check2"><br>
+				</code>
+            <b>Contrller code</b>
+            <code>directivecont.scope.check2 = true</code>
+        </div>
+        <div class="set_space"></div>
+        <div class="row">
+            Radio Buttons
+        </div>
+        <code>
+        	&lt;input type="radio" ng-model="radio1" value="1">Value 1 <br>
+            &lt;input type="radio" ng-model="radio1" value="2">Value 2 <br>
+            &lt;input type="radio" ng-model="radio1" value="3">Value 3 <br>
+            &lt;input type="radio" ng-model="radio1" value="4">Value 4 <br>
+        </code>
+        <div class="row">
+            Radio Buttons with initialized values
+        </div>
+        <code>
+			directivecont.scope.radio2 = 1;
+        </code>
+        <div class="row">
+            Radio Buttons with objects as values
+        </div>
+        <code>
+        	&lt;input type="radio" ng-model="radio1" ng-value="{name : 'Jhon' , age : 24}">Value 1 <br>
+            &lt;input type="radio" ng-model="radio1" ng-value="{name : 'Jane' , age : 20}">Value 2 <br>
+        </code>
+        <div class="set_space"></div>
+        <div class="row">
+            Select boxes
+        </div>
+        <code>
+        	&lt;select name="" id="" class="form-control" ng-model="select1"><br>
+                                &lt;option value="1">Value 1&lt;/option><br>
+                                &lt;option value="2">Value 2&lt;/option><br>
+                                &lt;option value="3">Value 3&lt;/option><br>
+                                &lt;option value="4">Value 4&lt;/option><br>
+                                &lt;option value="5">Value 5&lt;/option><br>
+                            &lt;/select>
+        </code>
+        <div class="row">
+            Select box with initialized value
+        </div>
+        <code>
+			directivecont.scope.select2 = 1;
+        </code>
+    </div>
+    <div class="set_space row">
+        <div class="col-md-offset-4">
+            <btton class="btn btn-danger" ng-click="no()">Close</btton>
+        </div>
+    </div>
+</div>

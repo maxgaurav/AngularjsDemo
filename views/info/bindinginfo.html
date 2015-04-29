@@ -1,0 +1,30 @@
+<div class="col-md-offset-1">
+    <div>
+        <div class="page-header">
+            <h3>Binding HTML</h3>
+        </div>
+    </div>
+    <div>
+        <div class="set_space row">
+            <div class="row">
+                The expression 10 + 5
+            </div>
+            <code>
+                <span>{</span>{ 10 + 5 }}
+            </code>
+            <div class="row">
+                Binding with the texbox
+            </div>
+            <code>
+                &lt;input type="text" ng-model="test"><br>
+                 &lt;p ng-bind="test">&lt;p>
+                 <span>{</span>{(test == 'icecream') ? I Love ICE CREAM}}
+			</code>
+        </div>
+    </div>
+    <div class="set_space row">
+        <div class="col-md-offset-4">
+            <btton class="btn btn-danger" ng-click="no()">Close</btton>
+        </div>
+    </div>
+</div>

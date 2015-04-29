@@ -4,7 +4,14 @@
             <h3>Directive ng-if</h3>
         </div>
         <div class "row">
-            <p><b>The ngIf directive removes or recreates a portion of the DOM tree based on an {expression}. If the expression assigned to ngIf evaluates to a false value then the element is removed from the DOM, otherwise a clone of the element is reinserted into the DOM.</b></p>
+            <ul>
+                <li>
+                    The ngIf directive removes or recreates a portion of the DOM tree based on an {expression}.
+                </li>
+                <li>
+                    If ngIf evalutes to be true then a clone of the element is inserted or reinserted.
+                </li>
+            </ul>
         </div>
         <div class="row" ng-init="check1=true;check2=false">
             <div class="col-md-4">
@@ -42,13 +49,7 @@
     <div class="col-md-2">
         <div class="row">
             <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showCss()">CSS</button>
-            </div>
-            <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showHtml()">HTML</button>
-            </div>
-            <div class="col-md-12">
-                <button class="btn btn-primary btn-modal head" ng-click="showJs()">JAVASCRIPT</button>
+                <button class="btn btn-primary btn-modal head" ng-click="showHtml('ngifinfo')">HTML</button>
             </div>
         </div>
     </div>

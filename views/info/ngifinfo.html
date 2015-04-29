@@ -1,0 +1,42 @@
+<div class="col-md-offset-1">
+    <div>
+        <div class="page-header">
+            <h3>ngIf HTML</h3>
+        </div>
+    </div>
+    <div class="set-height">
+        <div class="set_space row">
+            <div class="row">
+                ngIf Directive
+            </div>
+            <code>
+                    &lt;Any ng-if="true">
+                    &lt;Any ng-if="expression">
+                </code>
+            <div class="set_space"></div>
+            <div class="row">
+                Dom addition using checkboxes and ng-if
+            </div>
+            <code>
+                &lt;input type="checkbox" class="form-control" ng-model="check1">
+                &lt;input type="checkbox" class="form-control" ng-model="check2">
+            </code>
+            <div class="row">
+                DOM div elements with ng-if attributes
+            </div>
+            <code>
+                &lt;div ng-if="check1==true">
+                    I am added because checkbox 1 is true
+                &lt;/div>
+                &lt;div ng-if="check2==false">
+                    I am added because checkbox 2 is false
+                &lt;/div>
+            </code>
+        </div>
+    </div>
+    <div class="set_space row">
+        <div class="col-md-offset-4">
+            <btton class="btn btn-danger" ng-click="no()">Close</btton>
+        </div>
+    </div>
+</div>

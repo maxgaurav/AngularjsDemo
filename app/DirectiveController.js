@@ -2,15 +2,15 @@
 
 demo.controller('DirectiveController', function ($scope, $modal, $rootScope) {
 
-  var directive = this;
-  directive.scope = $scope;
+  var directivecont = this;
+  directivecont.scope = $scope;
 
-  directive.scope.text2 = 'This is pre loaded data';
-  directive.scope.checkbox2 = true;
-  directive.scope.select2 = 1;
-  directive.scope.radio2 = 1;
-  directive.scope.names = ['John', 'Jessie'];
-  directive.scope.childs = [{
+  directivecont.scope.text2 = 'This is pre loaded data';
+  directivecont.scope.checkbox2 = true;
+  directivecont.scope.select2 = 1;
+  directivecont.scope.radio2 = 1;
+  directivecont.scope.names = ['John', 'Jessie'];
+  directivecont.scope.childs = [{
     'name': 'John',
     'gender': 'Male'
   }, {
@@ -18,10 +18,14 @@ demo.controller('DirectiveController', function ($scope, $modal, $rootScope) {
     'gender': 'Fe-Male'
   }];
 
-  directive.scope.option_values = [{name: 'Value 1'}, {name: 'Value 2'}];
+  directivecont.scope.option_values = [{
+    name: 'Value 1'
+  }, {
+    name: 'Value 2'
+  }];
 
   //funtion to open css pop up
-  directive.scope.showCss = function () {
+  directivecont.scope.showCss = function () {
     var modal = {};
     modal.showCss = true;
     modal.showJs = false;
@@ -39,40 +43,37 @@ demo.controller('DirectiveController', function ($scope, $modal, $rootScope) {
     });
   };
 
-  directive.scope.addSelect = function (name) {
+  directivecont.scope.addSelect = function (name) {
     var item = {};
     item.name = name;
-    directive.scope.option_values.push(item);
-    directive.scope.input_name = '';
+    directivecont.scope.option_values.push(item);
+    directivecont.scope.input_name = '';
   };
 
-  directive.scope.addName = function (name) {
+  directivecont.scope.addName = function (name) {
 
-    directive.scope.names.push(name);
-    directive.scope.input_name = '';
+    directivecont.scope.names.push(name);
+    directivecont.scope.input_name = '';
   };
 
-  directive.scope.addNameObject = function (name, gender) {
+  directivecont.scope.addNameObject = function (name, gender) {
     var item = {};
     item.name = name;
     item.gender = gender;
-    directive.scope.childs.push(item);
-    directive.scope.input_name1 = '';
+    directivecont.scope.childs.push(item);
+    directivecont.scope.input_name1 = '';
   };
 
   //funtion to open css pop up
-  directive.scope.showJs = function () {
+  directivecont.scope.showJs = function (type) {
     var modal = {};
-    modal.showCss = true;
-    modal.showJs = false;
-    modal.showHtml = false;
 
     var modalInstance = $modal.open({
-      templateUrl: 'views/info/directiveinfo.html',
-      controller: 'directiveController',
+      templateUrl: 'views/info/' + type + '.html',
+      controller: 'ModalController',
       size: 'lg',
       resolve: {
-        items: function () {
+        modal: function () {
           return modal;
         }
       }
@@ -80,28 +81,25 @@ demo.controller('DirectiveController', function ($scope, $modal, $rootScope) {
   };
 
   //funtion to open css pop up
-  directive.scope.showHtml = function () {
+  directivecont.scope.showHtml = function (type) {
     var modal = {};
-    modal.showCss = true;
-    modal.showJs = false;
-    modal.showHtml = false;
 
     var modalInstance = $modal.open({
-      templateUrl: 'views/info/directiveinfo.html',
-      controller: 'directiveController',
+      templateUrl: 'views/info/' + type + '.html',
+      controller: 'ModalController',
       size: 'lg',
       resolve: {
-        items: function () {
+        modal: function () {
           return modal;
         }
       }
     });
   };
 
-  directive.scope.no = function () {
+  directivecont.scope.no = function () {
     $modalInstance.dismiss('cancel');
   };
-    directive.scope.init = function () {
+  directivecont.scope.init = function () {
     $rootScope.active_home = false;
     $rootScope.active_intro = false;
     $rootScope.active_work = false;
@@ -111,5 +109,10 @@ demo.controller('DirectiveController', function ($scope, $modal, $rootScope) {
     $rootScope.active_form = false;
     $rootScope.active_merit = false;
   };
-  directive.scope.init();
+  directivecont.scope.init();
+
+  directivecont.scope.ngInitFunc = function () {
+
+    directivecont.scope.initfunct = "I have been initialized by ng-init";
+  };
 });

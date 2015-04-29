@@ -6,56 +6,15 @@ demo.controller('BindingController', function ($scope, $modal, $rootScope) {
   binding.scope = $scope;
 
   //funtion to open css pop up
-  binding.scope.showCss = function () {
+  binding.scope.showHtml = function (type) {
     var modal = {};
-    modal.showCss = true;
-    modal.showJs = false;
-    modal.showHtml = false;
 
     var modalInstance = $modal.open({
-      templateUrl: 'views/info/homeinfo.html',
-      controller: 'HomeController',
+      templateUrl: 'views/info/' + type + '.html',
+      controller: 'ModalController',
       size: 'lg',
       resolve: {
-        items: function () {
-          return modal;
-        }
-      }
-    });
-  };
-
-  //funtion to open css pop up
-  binding.scope.showJs = function () {
-    var modal = {};
-    modal.showCss = true;
-    modal.showJs = false;
-    modal.showHtml = false;
-
-    var modalInstance = $modal.open({
-      templateUrl: 'views/info/homeinfo.html',
-      controller: 'HomeController',
-      size: 'lg',
-      resolve: {
-        items: function () {
-          return modal;
-        }
-      }
-    });
-  };
-
-  //funtion to open css pop up
-  binding.scope.showHtml = function () {
-    var modal = {};
-    modal.showCss = true;
-    modal.showJs = false;
-    modal.showHtml = false;
-
-    var modalInstance = $modal.open({
-      templateUrl: 'views/info/homeinfo.html',
-      controller: 'HomeController',
-      size: 'lg',
-      resolve: {
-        items: function () {
+        modal: function () {
           return modal;
         }
       }

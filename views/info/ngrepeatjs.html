@@ -1,0 +1,36 @@
+<div class="col-md-offset-1">
+	<div>
+		<div class="page-header">
+			<h3>ngRepeat JS</h3>
+		</div>
+	</div>
+	<div>
+		<div class="set_space row">
+			<div class="row">
+				Adding value to ng-repeat
+			</div>
+				<code>
+					  directivecont.scope.addName = function (name) {<br>
+    				directivecont.scope.names.push(name);<br>
+  					};
+				</code>
+			<div class="set_space"></div>
+			<div class="row">
+				Adding objects to ng-repeat
+			</div>
+			<code>
+				  directivecont.scope.addNameObject = function (name, gender) {<br>
+				    var item = {};<br>
+				    item.name = name;<br>
+				    item.gender = gender;<br>
+				    directivecont.scope.childs.push(item);<br>
+  					};
+			</code>
+		</div>
+	</div>
+	<div class="set_space row">
+		<div class="col-md-offset-4">
+			<btton class="btn btn-danger" ng-click="no()">Close</btton>
+		</div>
+	</div>
+</div>

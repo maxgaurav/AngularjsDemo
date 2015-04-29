@@ -17,7 +17,7 @@ demo.config(function ($stateProvider, $urlRouterProvider) {
     //routes for intro
     .state('intro', {
       url: '/intro',
-      controller : 'IntroController',
+      controller: 'IntroController',
       templateUrl: 'views/intro.html'
     })
     //child routes
@@ -137,4 +137,17 @@ demo.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: 'views/questions.html'
     });
 
+});
+
+demo.run(function ($rootScope) {
+  $rootScope.setQuestion = function () {
+    $rootScope.active_home = false;
+    $rootScope.active_intro = false;
+    $rootScope.active_work = false;
+    $rootScope.active_component = false;
+    $rootScope.active_binding = false;
+    $rootScope.active_directive = false;
+    $rootScope.active_form = false;
+    $rootScope.active_merit = false;
+  };
 });
