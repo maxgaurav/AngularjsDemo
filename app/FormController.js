@@ -38,18 +38,15 @@ demo.controller('FormController', function ($scope, $modal, $rootScope) {
   };
 
   //funtion to open css pop up
-  formcont.scope.showCss = function () {
+  formcont.scope.showJs = function (type) {
     var modal = {};
-    modal.showCss = true;
-    modal.showJs = false;
-    modal.showHtml = false;
 
     var modalInstance = $modal.open({
-      templateUrl: 'views/info/formcontinfo.html',
+      templateUrl: 'views/info/' + type + '.html',
       controller: 'ModalController',
       size: 'lg',
       resolve: {
-        items: function () {
+        modal: function () {
           return modal;
         }
       }
@@ -57,37 +54,15 @@ demo.controller('FormController', function ($scope, $modal, $rootScope) {
   };
 
   //funtion to open css pop up
-  formcont.scope.showJs = function () {
+  formcont.scope.showHtml = function (type) {
     var modal = {};
-    modal.showCss = true;
-    modal.showJs = false;
-    modal.showHtml = false;
 
     var modalInstance = $modal.open({
-      templateUrl: 'views/info/formcontinfo.html',
+      templateUrl: 'views/info/' + type + '.html',
       controller: 'ModalController',
       size: 'lg',
       resolve: {
-        items: function () {
-          return modal;
-        }
-      }
-    });
-  };
-
-  //funtion to open css pop up
-  formcont.scope.showHtml = function () {
-    var modal = {};
-    modal.showCss = true;
-    modal.showJs = false;
-    modal.showHtml = false;
-
-    var modalInstance = $modal.open({
-      templateUrl: 'views/info/formcontinfo.html',
-      controller: 'ModalController',
-      size: 'lg',
-      resolve: {
-        items: function () {
+        modal: function () {
           return modal;
         }
       }
